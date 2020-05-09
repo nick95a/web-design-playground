@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+        .buttons {
+            display: table;
+            margin: 0 auto;
+            
+        }
+
+        .buttons [class *= 'button']{
+            margin: 0 auto;
+            padding: 10px;
+            vertical-align: center;
+            text-align: center;
+            margin-right: 20px;
+            border: none;
+        }
+        
+
+        .button-signup {
+            
+            background-color: sienna;
+            color: white;
+            transition-duration: 0.5s;
+        }
+
+        .button-signup:hover {
+            background-color: sandybrown;
+            font-weight: bold;
+            border: 2px solid black;
+            border-radius: 20%;
+            box-shadow: 10px 10px 20px 10px yellow;
+        }
+
+        .button-purchase {
+            opacity: 0.2;
+            cursor: not-allowed;
+            width: 200px;
+            transition-duration: 0.5s;
+            background-color: #4040a1;
+            color: #fefbd8;
+            border: 2px solid #618685;
+        }
+
+        .button-purchase:hover {
+            opacity: 1;
+            cursor:pointer;
+            width: 250px;
+        }
+
+        .button-purchase span {
+            display: inline-block;
+            position: relative;
+            font-size: 20px;
+        }
+
+        .button-purchase span:before {
+            content: '\00ab';
+            opacity: 1;
+            color: #fefbd8;
+            position: absolute;
+            left: -15px;
+            transition-duration: 0.5s;
+        }
+        
+        .button-purchase:hover span:before {
+            content: '\00ab';
+            opacity: 1;
+            color: yellow;
+            position: absolute;
+            left: -30px;
+        }
+        
+
+        .button-purchase span:after {
+            content: '\00bb';
+            color: #fefbd8;
+            opacity: 1;
+            position: absolute;
+            right: -15px;
+            transition-duration: 0.5s;
+        }
+
+        .button-purchase:hover span:after {
+            content: '\00bb';
+            color: yellow;
+            opacity: 1;
+            position: absolute;
+            right: -30px;
+        }
+
+        .button-select {
+            background-color: #b5e7a0;
+            color: black;
+            text-align: center;
+            width: 200px;
+            border: none;
+            transition-duration: 0.5s;
+        }
+
+        .button-select:hover {
+            background-color: #86af49;
+            border: 2px solid black;
+            color: white;
+        }
+
+        .button-select:active {
+
+            transform: translateY(10px);
+            opacity: 0.5;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <div class = 'buttons'>
+        <button class = 'button-signup' value = 'Записаться' type = 'submit'>Записаться</button>
+        <button class = 'button-purchase' value = 'Записаться' type = 'submit'><span>Купить</span></button>
+        <button class = 'button-select' value = 'Записаться' type = 'submit'>Выбрать программу</button>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
