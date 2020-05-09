@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+
+            form {
+                width: 25%;
+                height: 300px;
+                margin: 0 auto;
+            }
+            input [type = 'text'], input [type = 'submit'], select, label {
+                display: block;
+                padding: 5px;
+            }
+
+            input, select{
+                margin-bottom: 10px;
+            }
+
+            input[type = 'submit'] {
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: 0px;
+                background-color: tomato;
+                border: 0px;
+                width: 100px;
+                transition-duration: 0.5s;
+            }
+
+            input[type = 'submit']:hover{
+                border: 2px solid black;
+                font-size: 0.8em;
+                cursor: pointer
+            }
+
+            legend {
+                text-align: center;
+                font-weight: bold;
+            }
+
+            label.radio {
+                display: inline-block;
+            }
+
+            .radio-buttons {
+                display: inline-block;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+
+        </header>
+
+        <body>
+            
+            <form action = '#' method = 'post' target = '_blank'>
+                <fieldset>
+                    <legend>Выберите программу:</legend>
+
+                    <label for = 'name'>Ваше имя:</label>
+                    <input type = 'text' id = 'name' placeholder = 'Имя' required autofocus>
+
+                    <label for = 'surname'>Ваша фамилия:</label>
+                    <input type = 'text' id = 'surname' placeholder = 'Фамилия' required>
+
+                    <label for = 'email'>Ваша электронная почта:</label>
+                    <input type = 'email' id = 'email' name = 'email' placeholder = 'your_email@your_domain' required>
+                    
+                    <label>Оцените свой уровень подготовки:</label>
+
+                    <div class = 'radio-buttons'>
+                            
+                        <input class = 'radio' type = 'radio' id = 'amateur' name = 'level' required>
+                        <label class = 'radio' for = 'amateur'>Новичок</label>
+
+                    </div>
+                    <div class = 'radio-buttons'>
+                    
+                        <input class = 'radio' type = 'radio' id = 'intermediate' name = 'level' required>
+                        <label class = 'radio' for = 'intermediate'>Средний</label>
+
+                    </div>
+                    <div class = 'radio-buttons'>
+                    
+                        <input class = 'radio' type = 'radio' id = 'advanced' name = 'level' required>
+                        <label class = 'radio'for = 'advanced'>Профи</label>
+                    </div>
+                    
+                    <label for = 'distance'>Какую дистанцию вы хотите преодолеть?</label>
+                    <select id = 'distance'>
+                        <option value = '10 км'>10 км</option>
+                        <option value = '20 км'>21 км</option>
+                        <option value = '42 км'>42 км</option>
+                    </select>
+
+                    <input type = 'submit' value = 'Отправить'>
+                </fieldset>
+            </form>
+        
+        </body>
+
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>
