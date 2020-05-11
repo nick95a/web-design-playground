@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                display: table;
+                height: 200px;
+                width: 200px;
+                margin: 0px auto;
+                border-spacing: 50px;
+            }
+
+            .container__row {
+                display: table-row;
+            }
+
+            .container__row__item {
+                display: table-cell;
+                background-color: burlywood;
+                border: 2px solid black;
+                font-size: 20px;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            @keyframes rotation {
+
+                0% {transform: rotate(0deg);}
+                25% {transform: rotate(90deg);}
+                50% {transform: rotate(180deg);}
+                75% {transform: rotate(270deg);}
+                100% {transform: rotate(360deg);}
+                
+            }
+
+            @keyframes slide {
+
+                0%  {transform: translateX(-200%);}
+                25% {transform: translateX(-100%);}
+                50% {transform: translateX(0%);}
+                75% {transform: translateX(100%);}
+                100% {transform: translateX(200%);}
+
+        }       
+
+        @keyframes burst {
+
+                0%  {transform: translateY(0%);}
+                25% {transform: translateX(25%) scale(1.5, 1.5); font-size: 12px;}
+                50% {transform: translateX(50%) scale(3, 3); font-size: 17px;}
+                75% {transform: translateX(75%) scale(4, 4); font-size: 20px;}
+                100% {transform: translateX(100%) scale(0, 0); font-size: 0px;}
+
+}       
+            
+            .container__row__item_rotate {
+                animation-name: rotation;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            .container__row__item_slide {
+                animation-name: slide;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            .container__row__item_burst {
+                animation-name: burst;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+                font-size: 10px;
+            }
+
+
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+        </header>
+
+        <main>
+
+            <div class = 'container'>
+
+                <div class = 'container__row'><div class = 'container__row__item container__row__item_rotate'>1</div></div>
+                <div class = 'container__row'><div class = 'container__row__item container__row__item_slide'>2</div></div>
+                <div class = 'container__row'><div class = 'container__row__item container__row__item_burst'>
+                    I am about to burst
+                </div>
+            </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>
