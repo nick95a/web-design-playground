@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightcyan;
+        }
+        .timeline {
+            position: relative;
+            width: 600px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            top: 0px;
+            left: 50%;
+            bottom: 0px;
+            background-color: black;
+        }
+
+        .container {
+            background-color: lightsalmon;
+            padding: 10px;
+            border: 2px solid black;
+            position: relative;
+            width: 50%;
+        }
+
+        .container.left::after {
+            content: '';
+            background-color: white;
+            border: 2px solid orange;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            z-index: 1;
+            position: absolute;
+            bottom: 50%;
+            right: -26%;
+        }
+
+        .container.right::after {
+            content: '';
+            background-color: white;
+            border: 2px solid orange;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            z-index: 1;
+            position: absolute;
+            bottom: 50%;
+            left: -24%;
+        }
+
+        .right {
+            left: 60%;
+            
+        }
+
+        .left {
+            left: -10%;    
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    
+    <header>
+
+    </header>
+
+    <main>
+
+        <div class = 'timeline'>
+
+            <div class = 'container right'>
+                <div class = 'content'>
+                    Vestibulum sit amet ante est. Vivamus dapibus turpis vel dolor lobortis, nec lobortis massa pulvinar. In hac habitasse platea dictumst. Nam bibendum accumsan arcu vitae condimentum.
+                </div>
+            </div>
+            <div class = 'container left'>
+                <div class = 'content'>
+                    Vestibulum sit amet ante est. Vivamus dapibus turpis vel dolor lobortis, nec lobortis massa pulvinar. In hac habitasse platea dictumst. Nam bibendum accumsan arcu vitae condimentum.
+                </div>
+            </div>
+            <div class = 'container right'>
+                <div class = 'content'>
+                    Vestibulum sit amet ante est. Vivamus dapibus turpis vel dolor lobortis, nec lobortis massa pulvinar. In hac habitasse platea dictumst. Nam bibendum accumsan arcu vitae condimentum.
+                </div>
+            </div>
+            <div class = 'container left'>
+                <div class = 'content'>
+                    Vestibulum sit amet ante est. Vivamus dapibus turpis vel dolor lobortis, nec lobortis massa pulvinar. In hac habitasse platea dictumst. Nam bibendum accumsan arcu vitae condimentum.
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+
+</html>
