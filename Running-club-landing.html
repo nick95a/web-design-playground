@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name = 'viewport' content = 'width=device-width, initial-scale = 1.0'>
+    <link href = '#' rel = 'stylesheet'>
+    <title></title>
+    <meta charset = 'utf-8'>
+    <script src="https://kit.fontawesome.com/034e12ca19.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+
+        @font-face {
+            font-family: 'Roboto slab', serif;
+        }
+
+        * {
+            font-family: 'Roboto slab';
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        
+        .heading {
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .row__column {
+            flex: 1;
+            
+        }
+        
+        .row__column_border {
+            border: 2px solid black;
+        }
+
+        .row__column_header {
+            height: 100px;
+        }
+
+        .row__column_small {
+            height: 200px;
+        }
+        
+        
+        .row__column_medium {
+            height: 400px;
+        }
+
+        .row__column_large {
+            height: 800px;
+        }
+
+        .row__column__textbox {
+            text-align: center;
+        }
+    
+        .row__column__textbox__image {
+            width: 200px;
+            height: auto;
+            background-size: contain;
+        }
+
+        .row__column__textbox__text_overlay {
+           /*
+            position: absolute;
+            bottom: 10px;
+            color: white;
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: sienna;
+            */
+        }
+
+        .row__column__social__item{
+            text-align: center;
+        }
+
+        .row__column__social__item span{
+            margin-right: 10px;
+        }
+
+        .main-footer-contacts {
+            background-color: sandybrown;
+        }
+
+        .row_centered-column {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+        }
+
+        .row_centered-row {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+        }
+
+        .row_centered-row-start {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+        }
+
+
+        .row_promo-image{
+            background-image: url('running.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            padding: 10px 10px;
+            border: none;
+        }
+
+        .btn_black {
+            background-color: black;
+
+        }
+
+        .btn-large {
+            font-size: 20px;
+            width: 200px;
+        }
+
+        .btn-medium {
+            font-size: 15px;
+            width: 150px;
+            padding: 5px;
+        }
+
+        .btn-small {
+            font-size: 10px;
+            width: 50px;
+            padding: 2px;
+        }
+
+        .btn_transparent {
+            background: transparent;
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+        }
+        .link:hover{
+            color: #fbefcc;
+            cursor: pointer;
+        }
+
+        .text_large {
+            font-size: 2em;
+        }
+
+        .text_medium {
+            font-size: 1.5em;
+        }
+
+        .text_small {
+            font-size: 1.2em;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .text-spaced {
+            margin-right: 50px;
+            margin-left: 50px;
+            transition: margin-left 3s, margin-right 3s;
+        }
+
+        .text-spaced:hover{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .margin-large{
+            margin: 40px;
+        }
+        .margin-medium{
+            margin: 20px;
+        }
+        .margin-small{
+            margin: 10px;
+        }
+        
+        .margin-top-large{
+            margin-top: 40px;
+        }
+        .margin-top-medium{
+            margin-top: 20px;
+        }
+        .margin-top-small{
+            margin-top: 10px;
+        }
+
+        .margin-bottom-large{
+            margin-bottom: 40px;
+        }
+        .margin-bottom-medium{
+            margin-bottom: 20px;
+        }
+        .margin-bottom-small{
+            margin-bottom: 10px;
+        }
+
+        .padding-top-x-large {
+            padding-top: 80px;
+        }
+        .padding-top-large {
+            padding-top: 40px;
+        }
+        .padding-top-medium {
+            padding-top: 20px;
+        }
+        .padding-top-small {
+            padding-top: 10px;
+        }
+
+        .padding-bottom-x-large {
+            padding-bottom: 80px;
+        }
+        .padding-bottom-large {
+            padding-bottom: 40px;
+        }
+        .padding-bottom-medium {
+            padding-bottom: 20px;
+        }
+        .padding-bottom-small {
+            padding-bottom: 10px;
+        }
+
+        .background-color-1 {
+            background-color: #fbefcc;
+        }
+        .background-color-2 {
+            background-color: #f9ccac;
+        }
+        .background-color-3 {
+            background-color: #f4a688;
+        }
+        .background-color-4 {
+            background-color: #e0876a;
+        }
+
+        .border-small {
+            border: 2px solid black;
+        }
+
+        .border-medium {
+            border: 3px solid black;
+        }
+
+        .border-medium {
+            border: 5px solid black;
+        }
+
+        .border-none {
+            border: none;
+        }
+
+        .opacity-medium{
+            opacity: 0.5;   
+        }
+        
+        .row__column[class *= 'opacity']:hover {
+            opacity: 0.7;
+            
+        }
+
+        .color-white {
+            color: white;
+        }
+
+        .margin {
+            margin: 10px;
+        }
+
+
+        @media screen and (max-width: 700px){
+            .row_centered-column-small-screen {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: center;
+            }
+            .row__column-small-screen {
+                flex: 1;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<header>
+    
+    <div class = 'container background-color-3'>
+        
+        <div class = 'row row_centered-column-small-screen row_centered-row'>
+            <div class = 'row__column row__column_header row_centered-column'>
+                <div class = 'row__column__textbox'>
+                    <p><a class = 'link' href = 'Run4Life.html'><i class="fas fa-running fa-4x"></i></a></p>
+                </div>
+            </div>
+            <div class = 'row__column row__column_header row_centered-column'>
+                <div class = 'row__column__textbox'>
+                    <p><a class = 'link' href = '#main-promo'>Записаться</a></p>
+                </div>
+            </div>
+            <div class = 'row__column row__column_header row_centered-column'>
+                    <div class = 'row__column__textbox'>
+                        <p><a class = 'link' href = '#main-about'>О нас</a></p>
+                    </div>
+            </div>
+            <div class = 'row__column row__column_header row_centered-column'>
+                <div class = 'row__column__textbox'>
+                    <p><a class = 'link' href = '#main-approach'>Наш подход</a></p>
+                </div>
+            </div>
+            <div class = 'row__column row__column_header row_centered-column'>
+                <div class = 'row__column__textbox'>
+                    <a class = 'link' href = '#main-footer-contacts'>Контакты</a>
+                </div>
+            </div>
+        
+       </div>
+
+    </div>
+
+
+</header>
+<main>
+
+    <section id = 'main-promo' class = 'main_promo'>
+        <div class = 'container'>
+            <div class = 'row row_promo-image row_centered-column-small-screen'>
+                <div class = 'row__column row__column_large'>
+                    <div class = 'row row_centered-column'>
+                        <div class = 'row__column row__column_small'></div>
+                            <h1 class = 'heading text_large link'>Run 4 Life</h1>
+                            <div class = 'row__column__textbox background-color-3 margin-top-medium'>
+                                <p class = 'italic text_medium border-medium'><i class="fas fa-arrow-circle-right fa-2x"></i><span class = 'link text-spaced'>Твоя личная школа бега</span><i class="fas fa-arrow-circle-left fa-2x"></i></p>
+                            </div>
+                            <button class = 'link btn btn-large border-small btn_transparent margin-top-large background-color-3 border-small' type = 'button'>Записаться</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id = 'main-about' class = 'main-about padding-top-x-large padding-bottom-x-large background-color-4'>
+
+        <div class = 'container'>
+            <h2 class = 'heading margin-bottom-medium'>О нас</h2>
+            <div class = 'row row_centered-row-start row_centered-column-small-screen'>
+                <div class = 'row__column row__column-small-screen row__column_medium row_centered-column color-white background-color-2 opacity margin-small' style = 'background-image: url("run_1.jpg"); background-size: 100% 100%; background-repeat: no-repeat; '>
+                    <h3 class = 'heading margin-top-small'>Новичок</h3>
+                    <div class = 'row__column__textbox'>
+                        <p>Lorem Ipsum</p>
+                        <button class = 'btn btn-medium color-white btn_black link' type = 'button'>Записаться</button>                    
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_medium row_centered-column color-white background-color-2 opacity margin-small' style = 'background-image: url("run_2.jpg"); background-size: 100% 100%; background-repeat: no-repeat; '>
+                    <h3 class = 'heading margin-top-small'>Середнячок</h3>
+                    <div class = 'row__column__textbox'>
+                        <p>Lorem Ipsum</p>
+                        <button class = 'btn btn-medium color-white btn_black link' type = 'button'>Записаться</button>                    
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_medium row_centered-column color-white background-color-2 opacity margin-small' style = 'background-image: url("run_3.jpg"); background-size: 100% 100%; background-repeat: no-repeat; '>
+                    <h3 class = 'heading margin-top-small'>Про</h3>
+                    <div class = 'row__column__textbox'>
+                        <p>Lorem Ipsum</p>
+                        <button class = 'btn btn-medium color-white btn_black link' type = 'button'>Записаться</button>                    
+                    </div>
+                </div>
+            </div>
+            <div class = 'row row_centered-column-small-screen'>
+                <div class = 'row__column row__column-small-screen row__column_medium row_centered-column color-white background-color-2 opacity margin-small' style = 'background-image: url("run_4.jpg"); background-size: 100% 100%; background-repeat: no-repeat; '>
+                    <h3 class = 'heading margin-top-small'>Десятка</h3>
+                    <div class = 'row__column__textbox'>
+                        <p>Lorem Ipsum</p>
+                        <button class = 'btn btn-medium color-white btn_black link' type = 'button'>Записаться</button>                    
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_medium row_centered-column color-white background-color-2 opacity margin-small' style = 'background-image: url("run_5.jpg"); background-size: 100% 100%; background-repeat: no-repeat; '>
+                    <h3 class = 'heading margin-top-small'>Половинка</h3>
+                    <div class = 'row__column__textbox'>
+                        <p>Lorem Ipsum</p>
+                        <button class = 'btn btn-medium color-white btn_black link' type = 'button'>Записаться</button>                    
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_medium row_centered-column color-white background-color-2 opacity margin-small' style = 'background-image: url("run_6.jpg"); background-size: 100% 100%; background-repeat: no-repeat; '>
+                    <h3 class = 'heading margin-top-small'>Марафон</h3>
+                    <div class = 'row__column__textbox'>
+                        <p>Lorem Ipsum</p>
+                        <button class = 'btn btn-medium color-white btn_black link' type = 'button'>Записаться</button>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id = 'main-approach' class = 'main-approach padding-top-x-large padding-bottom-x-large background-color-3'>
+
+        <div class = 'container'>
+            <h2 class = 'heading margin-bottom-medium'>Наш подход</h2>
+            <div class = 'row row_centered-column-small-screen'>
+                <div class = 'row__column row__column_small row__column_border margin-small row__column-small-screen '>
+                    <h3 class = 'heading text_large margin-top-small padding-bottom-small'>1</h3>
+                    <div class = 'row__column__textbox'>
+                        Анализ вашего здоровья
+                        <button class = 'btn btn-medium color-white margin-top-medium btn_black link' type = 'button'>1-ая неделя</button>  
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_small row__column_border margin-small'>
+                    <h3 class = 'heading text_large margin-top-small padding-bottom-small''>2</h3>
+                    <div class = 'row__column__textbox'>
+                        Выбор подходящей программы
+                        <button class = 'btn btn-medium color-white margin-top-medium btn_black link' type = 'button'>2-ая неделя</button>  
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_small row__column_border margin-small'>
+                    <h3 class = 'heading text_large margin-top-small padding-bottom-small''>3</h3>
+                    <div class = 'row__column__textbox'>
+                        Составление индивидуального плана чемпиона
+                        <button class = 'btn btn-medium color-white margin-top-medium btn_black link' type = 'button'>3-ая неделя</button>  
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'row row_centered-column-small-screen'>
+                <div class = 'row__column row__column-small-screen row__column_small row__column_border margin-small'>
+                    <h3 class = 'heading text_large margin-top-small padding-bottom-small'>4</h3>
+                    <div class = 'row__column__textbox'>
+                        Физические тренировки
+                        <button class = 'btn btn-medium color-white margin-top-medium btn_black link' type = 'button'>1-3 месяца</button>  
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_small row__column_border margin-small'>
+                    <h3 class = 'heading text_large margin-top-small padding-bottom-small''>5</h3>
+                    <div class = 'row__column__textbox'>
+                        Психологическая подготовка
+                        <button class = 'btn btn-medium color-white margin-top-medium btn_black link' type = 'button'>2 недели</button>  
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_small row__column_border margin-small'>
+                    <h3 class = 'heading text_large margin-top-small padding-bottom-small''>6</h3>
+                    <div class = 'row__column__textbox'>
+                        Старты и результаты
+                        <button class = 'btn btn-medium color-white margin-top-medium btn_black link' type = 'button'>После 6 месяцев</button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--
+
+    <section class = 'main-news padding-top-x-large padding-bottom-x-large background-color-4'>
+
+        <div class = 'container'>
+            <h2 class = 'heading margin-bottom-medium'>Наше движение</h2>
+            <div class = 'row'>
+                <div class = 'row__column row__column_large row_centered-column'>
+                    <div class = 'row__column__textbox'>
+                        <img src = 'море.jpg' class = 'row__column__textbox__image'>
+                        <div class = 'row__column__textbox__text_overlay'>Lorem ipsum</div>
+                    </div>
+                    <div class = 'row__column__textbox'>
+                        <img src = 'море.jpg' class = 'row__column__textbox__image'>
+                        <div class = 'row__column__textbox__text_overlay'>Lorem ipsum</div>
+                    </div>
+                </div>
+                <div class = 'row__column row__column_large row_centered-column'>
+                    <div class = 'row__column__textbox'>
+                        <img src = 'море.jpg' class = 'row__column__textbox__image'>
+                        <div class = 'row__column__textbox__text_overlay'>Lorem ipsum</div>
+                    </div>
+                    <div class = 'row__column__textbox'>
+                        <img src = 'море.jpg' class = 'row__column__textbox__image'>
+                        <div class = 'row__column__textbox__text_overlay'>Lorem ipsum</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    -->
+
+</main>
+
+<footer class = 'main-footer'>
+    <section id = 'main-footer-contacts' class = 'main-footer-contacts padding-top-medium padding-bottom-medium background-color-4'>
+        <div class = 'container'>
+            <h2 class = 'heading margin-bottom-medium'>Контакты</h2>
+            <div class = 'row row_centered-column-small-screen'>
+                <div class = 'row__column row__column-small-screen row__column_small row_centered-column padding-top-small'>
+                    <h3 class = 'heading margin-bottom-small'>Почта и телефон</h3>
+                    <div class = 'row__column__textbox'>
+                        <p>Почта: <a class = 'link' href = 'mailto:mailme@yandex.ru'>mailme@yandex.ru</a></p>
+                        <p>Телефон: 89699129345</p>
+                    </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_small row_centered-column padding-top-small'>
+                    <h3 class = 'heading text_small margin-bottom-small'>Соцсети</h3>
+                        <div class = 'row__column__social__item'>
+                            <span class = 'link'>Insta:</span><i class="fab fa-instagram fa-2x link"></i>
+                        </div>
+                        <div class = 'row__column__social__item'>
+                            <span class = 'link'>FB:</span><i class="fab fa-facebook fa-2x link"></i>
+                        </div>
+                        <div class = 'row__column__social__item'>
+                            <span class = 'link'>VK:</span><i class="fab fa-vk fa-2x link"></i>
+                        </div>
+                </div>
+                <div class = 'row__column row__column-small-screen row__column_small row_centered-column padding-top-small'>
+                    <h3 class = 'heading margin-bottom-small'>Адрес</h3>
+                    <div class = 'row__column__textbox'>
+                        <h4>Наше расположение:</h4>
+                        <p>Lorem ipsum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</footer>
+
+
+</body>
+
+
+</html>
