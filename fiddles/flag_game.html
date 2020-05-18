@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+
+* {
+  margin: 0px;
+  border: 0px;
+}
+.container {
+  width: 25%;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  margin-left: -3px;
+}
+
+.container_austria {
+    background-image: linear-gradient(0deg, red 33%, white 33%, white 66%, red 66%);
+}
+
+.container_russia {
+    background-image: linear-gradient(0deg, red 33%, blue 33%, blue 66%, white 66%);
+}
+
+.container_argentina {
+    background-image: linear-gradient(0deg, lightblue 33%, white 33%, white 66%, lightblue 66%);
+}
+
+.container_armenia {
+    background-image: linear-gradient(0deg, orange 33%, blue 33%, blue 66%, red 66%);
+}
+
+
+.text {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text_russia {
+  color: white;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class = 'container container_austria'>
+        <div class = 'text'>Austria</div>
+      </div>
+      
+      <div class = 'container container_russia'>
+        <div class = 'text text_russia'>Russia</div>
+      </div>
+      
+      <div class = 'container container_argentina'>
+        <div class = 'text'>Argentina</div>
+      </div>
+      
+      <div class = 'container container_armenia'>
+        <div class = 'text text_russia'>Armenia</div>
+      </div>
+
+</body>
+
+</html>
