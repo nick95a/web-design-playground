@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <script src="https://kit.fontawesome.com/034e12ca19.js" crossorigin="anonymous"></script>
+    <style>
+
+/*Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+*/
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 75px;
+            text-align: center;
+            height: 40px;
+        }
+
+        .bar {
+            position: relative;
+            width: 35px;
+            height: 5px;
+            margin: 6px 20px;
+            background-color: black;
+            transition: 0.5s;
+            
+        }
+
+        .change .bar_1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar_2 {
+            opacity: 0;
+        }
+
+        .change .bar_3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        .dropdown-content {
+            display: none;
+            color: white;
+            position: absolute;
+        }
+
+        .nav-btn {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            width: 75px;
+        }
+
+        .btn {
+            text-decoration: none;
+            width: 200px;
+            padding: 10px;
+            font-weight: bold;
+            border: none;
+        }
+
+
+        .change .dropdown-content{
+            display: block;
+        }
+
+        .grid__row__header {
+            display: grid;
+            grid-template-rows: 40px;
+            grid-template-columns: 75px auto;
+        }
+
+        .grid__row__col-1 {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: auto;
+        }
+
+        .grid__row__col-3 {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: auto auto auto;
+        }
+
+        .grid__row__column_centered {
+            justify-self: center;
+            align-self: center;
+        }
+
+        .grid__row__column_centered-y {
+            align-self: center;
+        }
+
+        .grid__row__column_centered-x {
+            justify-self: center;
+        }
+
+        .grid__row__row_centered {
+            justify-items: center;
+            align-items: center;
+        }
+
+
+        .padding-bottom-large {
+            padding-bottom: 80px;
+        }
+        .padding-bottom-medium {
+            padding-bottom: 40px;
+        }
+        .padding-bottom-small {
+            padding-bottom: 10px;
+        }
+
+        .padding-top-large {
+            padding-top: 80px;
+        }
+        .padding-top-medium {
+            padding-top: 40px;
+        }
+        .padding-top-small {
+            padding-top: 10px;
+        }
+
+        .padding-right-large {
+            padding-right: 80px;
+        }
+        .padding-right-medium {
+            padding-right: 40px;
+        }
+        .padding-right-small {
+            padding-right: 10px;
+        }
+
+        .padding-left-large {
+            padding-left: 80px;
+        }
+        .padding-left-medium {
+            padding-left: 40px;
+        }
+        .padding-left-small {
+            padding-left: 10px;
+        }
+
+        .padding-large {
+            padding: 80px;
+        }
+        .padding-medium {
+            padding: 40px;
+        }
+        .padding-small {
+            padding: 10px;
+        }
+
+
+        .margin-bottom-large {
+            margin-bottom: 80px;
+        }
+        .margin-bottom-medium {
+            margin-bottom: 40px;
+        }
+        .margin-bottom-small {
+            margin-bottom: 10px;
+        }
+
+        .margin-top-large {
+            margin-top: 80px;
+        }
+        .margin-top-medium {
+            margin-top: 40px;
+        }
+        .margin-top-small {
+            margin-top: 10px;
+        }
+
+        .margin-right-large {
+            margin-right: 80px;
+        }
+        .margin-right-medium {
+            margin-right: 40px;
+        }
+        .margin-right-small {
+            margin-right: 10px;
+        }
+
+        .margin-left-large {
+            margin-left: 80px;
+        }
+        .margin-left-medium {
+            margin-left: 40px;
+        }
+        .margin-left-small {
+            margin-left: 10px;
+        }
+
+        .margin-large {
+            margin: 80px;
+        }
+        .margin-medium {
+            margin: 40px;
+        }
+        .margin-small {
+            margin: 10px;
+        }
+
+
+        .header__image {
+            max-width: 200px;
+            max-height: 100px;
+            display: inline-block;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .header__icon {
+            max-height: 50px;
+            max-width: 100px;
+            display: inline-block;
+        }
+
+        .header__icon:hover, .header__image :hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        .header__icon__home {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .heading {
+            text-align: center;
+        }
+
+        .background-color-1 {
+            background-color: #EAE7DC;
+        }
+        .background-color-2 {
+            background-color: #D8C3A5;
+        }
+        .background-color-3 {
+            background-color: #8E8D8A;
+        }
+        .background-color-4 {
+            background-color: #E98074;
+        }
+        .background-color-5 {
+            background-color: #E85A4F;
+        }
+
+
+        .color-1 {
+            color: #EAE7DC;
+        }
+        .color-2 {
+            color: #D8C3A5;
+        }
+        .color-3 {
+            color: #8E8D8A;
+        }
+        .color-4 {
+            color: #E98074;
+        }
+        .color-5 {
+            color: #E85A4F;
+        }
+
+        .border-small {
+            border: 2px solid black;
+        }
+
+        .grid-col_height-xxs {
+            min-height: 40px;
+        }
+
+        .grid-col_height-xs {
+            min-height: 100px;
+        }
+
+        .grid-col_height-s {
+            min-height: 200px;
+        }
+
+        .grid-col_height-m {
+            min-height: 400px;
+        }
+
+        .grid-col_height-l {
+            min-height: 700px;
+        }
+
+        .grid-col_height-xl {
+            min-height: 1000px;
+        }
+
+        .grid-col_width-xxs {
+            min-width: 40px;
+        }
+
+        .grid-col_width-xs {
+            min-width: 100px;
+        }
+
+        .grid-col_width-s {
+            min-width: 200px;
+        }
+
+        .grid-col_width-m {
+            min-width: 400px;
+        }
+
+        .grid-col_width-l {
+            min-width: 700px;
+        }
+
+        .grid-col_width-xl {
+            min-width: 1000px;
+        }
+
+        .textbox {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+
+        .form__row {
+            width: 100%;
+        }
+
+        .form__row__label {
+            float: left;
+            width: 35%;
+        }
+
+        .form__row__input {
+            float: left;
+            width: 65%;
+        }
+
+        [class *="hover_white"]:hover {
+            color: white;
+        }
+
+        @media screen and (max-width: 736px){
+            
+            .grid__row__col-1_small-screen {
+                display: grid;
+                grid-template-rows: auto;
+                grid-template-columns: auto;
+            }
+
+
+            .margin-bottom-large_small-screen {
+            margin-bottom: 80px;
+            }
+            .margin-bottom-medium_small-screen {
+                margin-bottom: 40px;
+            }
+            .margin-bottom-small_small-screen {
+                margin-bottom: 10px;
+            }
+
+            .margin-top-large_small-screen {
+                margin-top: 80px;
+            }
+            .margin-top-medium_small-screen {
+                margin-top: 40px;
+            }
+            .margin-top-small_small-screen {
+                margin-top: 10px;
+            }
+
+
+            .padding-bottom-large_small-screen {
+                padding-bottom: 80px;
+            }
+            .padding-bottom-medium_small-screen {
+                padding-bottom: 40px;
+            }
+            .padding-bottom-small_small-screen {
+                padding-bottom: 10px;
+            }
+
+            .padding-top-large_small-screen {
+                padding-top: 80px;
+            }
+            .padding-top-medium_small-screen {
+                padding-top: 40px;
+            }
+            .padding-top-small_small-screen {
+                padding-top: 10px;
+            }
+        }
+
+    </style>
+    
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+</script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class = 'background-color-1'>
+            <div class = 'grid__row__header grid__row__col-1_small-screen grid__row__row_centered grid-col_width-xxs'>
+                <div class = 'grid__row__col-1_small-screen margin-top-small_small-screen margin-bottom-large_small-screen'>
+                    <div class = 'dropdown-container' onclick = 'myFunction(this)'>
+                        <div class = 'bar bar_1'></div>
+                        <div class = 'bar bar_2'></div>
+                        <div class = 'bar bar_3'></div>
+
+                        <div class = 'dropdown-content'>
+                            <a href = '#' class = 'nav-btn background-color-4'>Ссылка 1</a>
+                            <a href = '#' class = 'nav-btn background-color-4'>Ссылка 2</a>
+                            <a href = '#' class = 'nav-btn background-color-4'>Ссылка 3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class = 'grid__row__column_centered grid__row__col-1_small-screen'>
+                    <div class = 'textbox italic '>Самое главное в медитации — ты становишься ближе к своей подлинной сути.</div>
+                </div>
+            </div>
+            <div class = 'grid__row background-color-1'>
+                <div class = 'grid-col_height-l padding-bottom-large_small-screen'>
+                    <h1 class = 'heading margin-top-large color-5'>Осознавай это</h1>
+                    <h3 class = 'heading margin-bottom-large color-4'>Основы медитации для всех и каждого</h1>
+                
+                    <div class = 'grid__row__col-1 grid__row__row_centered margin-bottom-large grid__row__col-1_small-screen'>
+
+                        <img class = 'header__icon header__icon__home hover_white' src = 'home-solid.svg'>
+                    
+                    </div>
+
+                    <div class = 'grid__row__col-3 grid__row__row_centered grid__row__col-1_small-screen'>
+
+                        <img class = 'header__icon margin-bottom-large_small-screen hover_white' src = 'briefcase-solid.svg'>
+                    
+                    
+                        <img class = 'header__image hover_white' src = 'poses.png'>
+
+                        <img class = 'header__icon margin-top-large_small-screen hover_white' src = 'running-solid.svg'>
+
+                    </div>
+
+                    <div class = 'grid__row__col-1 grid__row__row_centered margin-top-large grid__row__col-1_small-screen'>
+
+                        <img class = 'header__icon header__icon__home hover_white' src = 'brain-solid.svg'>
+                    
+                    </div>
+                    <div class = 'grid__row__col-1 grid__row__row_centered margin-top-large grid__row__col-1_small-screen'>
+
+                        <button class = 'btn background-color-2 border-small'>Подписаться</button>
+                    
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>  
+
+        <section class = 'main-about-us background-color-2 padding-top-medium border-small'>
+        <div class = 'margin-bottom-medium grid__row__col-1 grid-col_height-xxs'>
+            <h2 class = 'heading grid-col_height-xxs'>Что такое медитация и чем мы занимаемся?</h2>
+        </div>
+
+
+        <div class = 'grid__row__col-3 grid-col_height-m border-small margin-top-medium grid__row__col-1_small-screen'>
+
+            <div class = 'grid__row__col-1 grid-col_height-m border-small grid__row__row_centered'>
+
+                <div class = 'textbox'>
+                    <i class="fas fa-comments fa-3x margin-bottom-medium margin-top-medium hover_white"></i>
+                    <p class = 'margin-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p>
+                </div>
+            </div>
+
+            <div class = 'grid__row__col-1 grid-col_height-m border-small grid__row__row_centered'>
+                <div class = 'textbox'>
+                    <i class="fas fa-water fa-3x margin-bottom-medium margin-top-medium hover_white"></i>
+                    <p class = 'margin-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p>
+                </div>
+            </div>
+
+            <div class = 'grid__row__col-1 grid-col_height-m border-small grid__row__row_centered'>
+                <div class = 'textbox'>
+                    <i class="fas fa-campground fa-3x margin-bottom-medium margin-top-medium hover_white"></i>
+                    <p class = 'margin-medium'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p>
+                </div>
+            </div>
+
+        </div>
+
+        </section>
+
+        <section class = 'main-programs background-color-1 padding-top-medium border-small '>
+
+            <div class = 'grid__row__col-1 grid-col_height-xxs '>
+                <h2 class = 'heading grid-col_height-xxs'>Наши программы</h2>
+            </div>
+
+            <div class = 'grid__row__col-1 grid-col_height-xl margin-top-medium '>
+
+                <div class = 'grid__row__col-3 grid__row__row_centered border-small grid__row__col-1_small-screen padding-top-medium_small-screen padding-bottom-medium_small-screen'>
+                    <div class = 'margin-left-medium margin-right-medium margin-bottom-medium_small-screen'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p></div>
+                    <div>
+                        <div class = 'border-small'>
+                            <img src = 'meditation_easy.jpg' style = 'max-width: 450px; max-height: 300px; display: block;'>
+                        </div>
+                    </div>
+                    <div class = 'margin-left-medium margin-right-medium margin-top-medium_small-screen'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p>
+                    </div>
+                </div>
+                
+                <div class = 'grid__row__col-3 grid__row__row_centered border-small grid__row__col-1_small-screen padding-top-medium_small-screen padding-bottom-medium_small-screen'>
+                    <div class = 'margin-left-medium margin-right-medium margin-bottom-medium_small-screen'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p></div>
+                    <div>
+                        <div class = 'border-small'>
+                            <img src = 'meditation_medium.jpg' style = 'max-width: 450px; max-height: 300px; display: block;'>
+                        </div>
+                    </div>
+                    <div class = 'margin-left-medium margin-right-medium margin-top-medium_small-screen'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p>
+                    </div>
+                </div>
+
+                <div class = 'grid__row__col-3 grid__row__row_centered border-small grid__row__col-1_small-screen padding-top-medium_small-screen padding-bottom-medium_small-screen'>
+                    <div class = 'margin-left-medium margin-right-medium margin-bottom-medium_small-screen'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p></div>
+                    <div>
+                        <div class = 'border-small'>
+                            <img src = 'meditation_hard_new.jpg' style = 'max-width: 450px; max-height: 300px; display: block;'>
+                        </div>
+                    </div>
+                    <div class = 'margin-left-medium margin-right-medium margin-top-medium_small-screen'><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque ultrices tortor, sit amet iaculis quam mollis a. Nam aliquam, orci in imperdiet rutrum, urna odio vulputate ante, quis ultrices eros erat nec ante. In consequat euismod bibendum. Nullam lacus quam, feugiat sit amet volutpat ut, condimentum id dui.</p></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class = 'main-sign-up padding-top-small background-color-2'>
+        <div class = 'grid__row__col-1 grid-col_height-xxs'>
+            <h2 class = 'heading grid-col_height-xxs'>Запишитесь на занятия</h2>
+        </div>
+
+        <div class = 'grid__row__col-3 grid-col_height-m grid__row__col-1_small-screen'>
+                <div class = ''></div>
+                <div class = 'grid__row__column_centered' style = 'width: 400px;'>
+                <form class = 'textbox' >
+                    
+                    <fieldset style = 'padding: 20px;' class = 'grid-col_height-s border-small'>
+
+                        <legend>Запись на занятия</legend>
+
+                                <div class = 'form__row'>
+                                    <div class = 'form__row__label'>
+                                        <label>Имя:</label>
+                                    </div>
+                                    <div class = 'form__row__input'>
+                                        <input type = 'textbox'>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class = 'form__row'>
+                                    <div class = 'form__row__label'>
+                                        <label>Фамилия:</label>
+                                    </div>
+                                    <div class = 'form__row__input'>
+                                        <input type = 'textbox'>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class = 'form__row'>
+                                    <div class = 'form__row__label'>
+                                        <label>Почта:</label>
+                                    </div>
+                                    <div class = 'form__row__input'>
+                                        <input type = 'email'>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class = 'form__row'>
+                                    <div class = 'form__row__label'>
+                                        <label>Телефон:</label>
+                                    </div>
+                                    <div class = 'form__row__input'>
+                                        <input type = 'tel'>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                    
+                    </fieldset>
+                </form>
+                 </div>
+                <div></div>
+        </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class = 'background-color-1 grid-col_height-m grid__row__col-3 border-small grid__row__col-1_small-screen'>
+
+
+           <div class = 'grid-col_height-m border-small'>
+                
+                <div class = 'grid__row__col-1 grid-col_height-m grid__row__row_centered margin-medium'>
+                    <div class = ''>
+                        Спокойный разум непоколебим под волнами мыслей
+                    </div>
+                </div>
+            </div>
+        
+            <div class = 'grid-col_height-m textbox border-small grid-col_width-m'>
+
+                <div class = 'grid__row__col-1 grid-col_height-m grid__row__row_centered'>
+
+                <h1 class = 'heading color-5 margin-bottom-medium'>Контакты</h1>
+
+                <i class="fab fa-instagram fa-2x link hover_white"></i>
+                <i class="fab fa-facebook fa-2x link hover_white"></i>
+                <i class="fab fa-vk fa-2x link hover_white"></i>
+
+                    
+                    <div class = 'textbox margin-medium'>
+                        <h3>Наш адрес:</h3>
+                        Вселенная <br>
+                        Млечный путь <br>
+                        Солнечная система <br>
+                        Планета Земля<br>
+                        Екатеринбург<br>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class = 'grid-col_height-m border-small'>
+                
+                
+                <div class = 'grid__row__col-1 grid-col_height-m grid__row__row_centered margin-medium'>
+                    <div class = ''>
+                        Посадите семя медитации и вы будете пожинать плоды душевного спокойствия
+                        </div>
+                   </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
