@@ -1,0 +1,66 @@
+<head>
+    <style>
+        * {
+          background-color: white;
+        }
+
+        .container {
+          width: 500px;
+          margin: 0 auto;
+          height: 400px;
+          background-color: orange;
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+          border: 2px solid black;
+         }
+
+         h1, p {
+                background-color:  orange;
+              }
+
+    </style>
+</head>
+
+<div class = 'container'>
+  <h1> 
+    Your local time is:    
+  </h1>
+  
+  <p id = 'time'>
+ 
+  </p>
+  <p id = 'hours'>
+  
+  </p>
+  <p id = 'minutes'>
+    
+  </p>
+  <p id = 'seconds'>
+    
+  </p>
+</div>
+
+<script>
+   var oneSecond = 1000;
+
+var showCurrentTime =  () => {
+  
+  let currentTime = new Date();
+   
+  let hours = currentTime.getHours();
+  let minutes = currentTime.getMinutes();
+  let seconds = currentTime.getSeconds();
+  
+  let elem = document.getElementById('time').innerHTML = currentTime;
+  
+  let hours_elem = document.getElementById('hours').innerHTML = 'Hours: ' + hours;
+  let minutes_elem = document.getElementById('minutes').innerHTML = 'Minutes: ' + minutes;
+  let seconds_elem = document.getElementById('seconds').innerHTML = 'Seconds: ' + seconds;
+  
+}
+
+setInterval(showCurrentTime, oneSecond);
+
+showCurrentTime();
+</script>
